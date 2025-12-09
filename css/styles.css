@@ -874,7 +874,7 @@ img {
 
 /* Services Page Specifics */
 .services-header {
-    background: linear-gradient(rgba(246, 223, 231, 0.8), rgba(255, 255, 255, 0.9)), url('../assets/hero_makeup_model.png');
+    background-image: url('../assets/hero_makeup_model.png');
     background-size: cover;
     background-position: center;
 }
@@ -997,7 +997,7 @@ img {
 
 /* Shop Page Specifics */
 .shop-header {
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(246, 223, 231, 0.6)), url('../assets/hero_makeup_model.png');
+    background-image: url('../assets/hero_makeup_model.png');
     /* Reuse hero or specific shop bg */
     background-size: cover;
     background-position: center;
@@ -1137,7 +1137,7 @@ img {
 
 /* Booking Page Specifics */
 .book-header {
-    background: linear-gradient(rgba(246, 223, 231, 0.9), rgba(255, 255, 255, 0.8)), url('../assets/hero_makeup_model.png');
+    background-image: url('../assets/hero_makeup_model.png');
     background-size: cover;
     background-position: center;
 }
@@ -1267,7 +1267,7 @@ textarea {
 
 /* Contact Page Specifics */
 .contact-header {
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(246, 223, 231, 0.6)), url('../assets/hero_makeup_model.png');
+    background-image: url('../assets/hero_makeup_model.png');
     background-size: cover;
     background-position: center;
 }
@@ -1359,7 +1359,7 @@ textarea {
 
 /* Gallery Page Specifics */
 .gallery-header {
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(246, 223, 231, 0.6)), url('../assets/hero_makeup_model.png');
+    background-image: url('../assets/hero_makeup_model.png');
     background-size: cover;
     background-position: center;
 }
@@ -1524,4 +1524,62 @@ textarea {
     /* Deep rose for higher contrast */
     text-shadow: 0 1px 3px rgba(255, 255, 255, 0.954);
     font-weight: 500;
+}
+
+.page-header::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+.page-header .italic-accent {
+    color: #b36b85;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.954);
+    font-weight: 500;
+}
+
+/* About Page Responsive */
+@media (max-width: 768px) {
+    .story-section .row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .image-stack {
+        height: 350px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+        /* Ensure it's displayed */
+        position: relative;
+        /* Maintain positioning context */
+    }
+
+    .why-us-section .row {
+        flex-direction: column-reverse;
+        /* Text on top, image on bottom for variety, or column for image top */
+    }
+}
+
+/* Combined About Section */
+.about-combined-section {
+    padding: 80px 0;
+}
+
+.row.align-top {
+    display: flex;
+    align-items: flex-start;
+    /* Align items to the top */
+    gap: 60px;
+}
+
+.about-combined-section .col-text {
+    flex: 1;
+}
+
+/* Responsive for Combined Section */
+@media (max-width: 768px) {
+    .row.align-top {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
