@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Beauty | Adunwealth BeautyHome</title>
+    <meta name="description"
+        content="Shop premium beauty products including luxury lashes, skincare essentials, and professional makeup.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.jpg" alt="Adunwealth BeautyHome Logo" class="logo-img">
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html" class="btn-nav">Book a Session</a></li>
+                <!-- Cart Icon -->
+                <li>
+                    <a href="#" class="cart-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header shop-header">
+        <div class="overlay"></div>
+        <div class="container text-center">
+            <h1 class="fade-in-up">Beauty <span class="italic-accent">Essentials</span></h1>
+            <p class="fade-in-up delay-1">Curated luxury products for your daily routine.</p>
+        </div>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="section shop-section">
+        <div class="container">
+
+            <!-- Filters -->
+            <div class="shop-filters text-center fade-in-up delay-2">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="lashes">Lashes</button>
+                <button class="filter-btn" data-filter="makeup">Makeup</button>
+                <button class="filter-btn" data-filter="skincare">Skincare</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="products-grid">
+
+                <!-- Product 1: Lashes -->
+                <div class="product-card" data-category="lashes">
+                    <div class="product-image">
+                        <div class="placeholder-img" style="background-color: #f9f9f9;"></div>
+                        <span class="badge">Best Seller</span>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                            <button class="action-btn" title="Add to Wishlist"><i
+                                    class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="cat-label">Lashes</div>
+                        <h4>Luxury Mink Lashes - Volume</h4>
+                        <p class="price">$25.00</p>
+                        <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Skincare -->
+                <div class="product-card" data-category="skincare">
+                    <div class="product-image">
+                        <div class="placeholder-img" style="background-color: #f9f9f9;"></div>
+                        <span class="badge new">New</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="cat-label">Skincare</div>
+                        <h4>Hydrating Glow Serum</h4>
+                        <p class="price">$45.00</p>
+                        <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3: Makeup -->
+                <div class="product-card" data-category="makeup">
+                    <div class="product-image">
+                        <div class="placeholder-img" style="background-color: #f9f9f9;"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="cat-label">Makeup</div>
+                        <h4>Matte Lipstick - Blush Pink</h4>
+                        <p class="price">$18.00</p>
+                        <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4: Lashes -->
+                <div class="product-card" data-category="lashes">
+                    <div class="product-image">
+                        <div class="placeholder-img" style="background-color: #f9f9f9;"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="cat-label">Lashes</div>
+                        <h4>Natural Wispy Lashes</h4>
+                        <p class="price">$20.00</p>
+                        <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5: Skincare -->
+                <div class="product-card" data-category="skincare">
+                    <div class="product-image">
+                        <div class="placeholder-img" style="background-color: #f9f9f9;"></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="cat-label">Skincare</div>
+                        <h4>Rose Water Toner</h4>
+                        <p class="price">$22.00</p>
+                        <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6: Makeup -->
+                <div class="product-card" data-category="makeup">
+                    <div class="product-image">
+                        <div class="placeholder-img" style="background-color: #f9f9f9;"></div>
+                        <span class="badge sale">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="cat-label">Makeup</div>
+                        <h4>Highlighter Palette - Gold</h4>
+                        <p class="price"><span class="old-price">$35.00</span> $28.00</p>
+                        <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Adunwealth</h3>
+                    <p>Luxury beauty services for the modern woman.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> 123 Beauty Lane, Lagos</p>
+                    <p><i class="fa-solid fa-phone"></i> +234 123 456 7890</p>
+                    <p><i class="fa-solid fa-envelope"></i> hello@adunwealth.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adunwealth BeautyHome. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Simple Shop Script
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const products = document.querySelectorAll('.product-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active to clicked
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    products.forEach(product => {
+                        if (filter === 'all' || product.getAttribute('data-category') === filter) {
+                            product.style.display = 'block';
+                            // Add a small animation
+                            product.style.animation = 'fadeInUp 0.5s forwards';
+                        } else {
+                            product.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        let cartCount = 0;
+        function addToCart() {
+            cartCount++;
+            document.querySelector('.cart-count').textContent = cartCount;
+            // Optional: Show a toast notification
+            alert("Item added to cart!");
+        }
+    </script>
+</body>
+
+</html>

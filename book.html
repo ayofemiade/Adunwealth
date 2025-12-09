@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Session | Adunwealth BeautyHome</title>
+    <meta name="description"
+        content="Book your appointment at Adunwealth BeautyHome. Select your service, date, and time for a luxury beauty experience.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.jpg" alt="Adunwealth BeautyHome Logo" class="logo-img">
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html" class="active btn-nav">Book a Session</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header book-header">
+        <div class="overlay"></div>
+        <div class="container text-center">
+            <h1 class="fade-in-up">Book Your <span class="italic-accent">Session</span></h1>
+            <p class="fade-in-up delay-1">Secure your spot for a transformative beauty experience.</p>
+        </div>
+    </header>
+
+    <!-- Booking Form Section -->
+    <section class="section booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="form-header text-center">
+                    <h2>Appointment Details</h2>
+                    <p>Please fill out the form below to schedule your visit.</p>
+                </div>
+
+                <form id="bookingForm" class="booking-form">
+                    <!-- Personal Info -->
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+234..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Service Selection -->
+                    <div class="form-group">
+                        <label for="service">Service Type</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="traditional">Traditional Makeup</option>
+                            <option value="bride">Bride Makeup</option>
+                            <option value="white-wedding">White Wedding Makeup</option>
+                            <option value="birthday">Birthday Shoot Makeup</option>
+                            <option value="baby-shower">Baby Shower Glam</option>
+                            <option value="pedicure">Pedicure</option>
+                            <option value="lashes">Lash Extensions</option>
+                            <option value="class">Makeup Tutorial Class</option>
+                        </select>
+                    </div>
+
+                    <!-- Date & Time -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <select id="time" name="time" required>
+                                <option value="" disabled selected>Select time</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">01:00 PM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                                <option value="17:00">05:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <select id="location" name="location" required>
+                            <option value="studio" selected>Adunwealth Studio (Lagos)</option>
+                            <option value="home-service">Home Service (Extra charges apply)</option>
+                        </select>
+                    </div>
+
+                    <!-- Payment -->
+                    <div class="form-group">
+                        <label for="payment">Payment Method</label>
+                        <select id="payment" name="payment" required>
+                            <option value="card">Credit/Debit Card</option>
+                            <option value="transfer">Bank Transfer</option>
+                            <option value="cash">Cash at Studio</option>
+                        </select>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="form-group">
+                        <label for="notes">Additional Notes (Optional)</label>
+                        <textarea id="notes" name="notes" rows="4"
+                            placeholder="Any allergies, specific requests, or details..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+                </form>
+
+                <!-- Confirmation Message (Hidden by default) -->
+                <div id="confirmationMsg" class="confirmation-msg" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-check-circle"></i>
+                    </div>
+                    <h3>Booking Confirmed!</h3>
+                    <p>Thank you, <span id="confName"></span>. Your appointment for <span id="confService"></span> on
+                        <span id="confDate"></span> has been scheduled.</p>
+                    <p>We will contact you shortly to confirm details.</p>
+                    <button class="btn btn-outline" onclick="location.reload()">Book Another</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Adunwealth</h3>
+                    <p>Luxury beauty services for the modern woman.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> 123 Beauty Lane, Lagos</p>
+                    <p><i class="fa-solid fa-phone"></i> +234 123 456 7890</p>
+                    <p><i class="fa-solid fa-envelope"></i> hello@adunwealth.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adunwealth BeautyHome. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Handle URL params to pre-select service
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceParam = urlParams.get('service');
+            if (serviceParam) {
+                const select = document.getElementById('service');
+                if (select) {
+                    select.value = serviceParam;
+                }
+            }
+
+            // Simple Form Submission Handling
+            const form = document.getElementById('bookingForm');
+            const confirmationMsg = document.getElementById('confirmationMsg');
+
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    // Get values for confirmation
+                    const name = document.getElementById('name').value;
+                    const service = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
+                    const date = document.getElementById('date').value;
+
+                    // Simulate submission
+                    form.style.display = 'none';
+                    document.querySelector('.form-header').style.display = 'none';
+
+                    document.getElementById('confName').textContent = name;
+                    document.getElementById('confService').textContent = service;
+                    document.getElementById('confDate').textContent = date;
+
+                    confirmationMsg.style.display = 'block';
+                    confirmationMsg.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
