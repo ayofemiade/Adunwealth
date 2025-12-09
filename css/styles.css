@@ -470,6 +470,31 @@ img {
     font-size: 0.8rem;
 }
 
+.why-us-section .row {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.why-us-section .col-text {
+    flex: 1;
+}
+
+.why-us-section p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.why-us-section .lead {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.why-us-section .commitment-block {
+    margin-top: 30px;
+}
+
 /* Sections */
 .section {
     padding: 80px 0;
@@ -1555,8 +1580,7 @@ textarea {
     }
 
     .why-us-section .row {
-        flex-direction: column-reverse;
-        /* Text on top, image on bottom for variety, or column for image top */
+        flex-direction: column;
     }
 }
 
