@@ -176,7 +176,7 @@ img {
 }
 
 .logo-img {
-    height: 60px;
+    height: 40px;
     /* Adjust based on logo aspect ratio */
     width: auto;
     object-fit: contain;
