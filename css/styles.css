@@ -1517,4 +1517,9 @@ textarea {
     .lightbox-content {
         width: 95%;
     }
+}.hero .italic-accent {
+    color: #b36b85;
+    /* Deep rose for higher contrast */
+    text-shadow: 0 2px 5px rgba(255, 255, 255, 0.8);
+    font-weight: 500;
 }
