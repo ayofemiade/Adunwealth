@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Adunwealth BeautyHome</title>
+    <meta name="description" content="View our portfolio of stunning makeup looks, bridal glam, and beauty treatments.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.jpg" alt="Adunwealth BeautyHome Logo" class="logo-img">
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html" class="btn-nav">Book a Session</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header gallery-header">
+        <div class="overlay"></div>
+        <div class="container text-center">
+            <h1 class="fade-in-up">Artistry in <span class="italic-accent">Motion</span></h1>
+            <p class="fade-in-up delay-1">A showcase of elegance, beauty, and timeless style.</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section">
+        <div class="container">
+
+            <!-- Filter Bar -->
+            <div class="gallery-filters text-center fade-in-up delay-2">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bridal">Bridal</button>
+                <button class="filter-btn" data-filter="traditional">Traditional</button>
+                <button class="filter-btn" data-filter="birthday">Birthday</button>
+                <button class="filter-btn" data-filter="lashes">Lashes</button>
+                <button class="filter-btn" data-filter="pedicure">Pedicure</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Item 1: Bridal -->
+                <div class="gallery-item" data-category="bridal">
+                    <div class="gallery-img-wrapper">
+                        <div class="placeholder-img" style="background-color: #f6dfe7;"></div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Bridal Glow</h3>
+                                <p>White Wedding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Traditional -->
+                <div class="gallery-item" data-category="traditional">
+                    <div class="gallery-img-wrapper">
+                        <div class="placeholder-img" style="background-color: #eee;"></div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Cultural Radiance</h3>
+                                <p>Traditional Wedding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Lashes -->
+                <div class="gallery-item" data-category="lashes">
+                    <div class="gallery-img-wrapper">
+                        <div class="placeholder-img" style="background-color: #f9f9f9;"></div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Volume Lashes</h3>
+                                <p>Lash Extensions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Birthday -->
+                <div class="gallery-item" data-category="birthday">
+                    <div class="gallery-img-wrapper">
+                        <div class="placeholder-img" style="background-color: #f6dfe7;"></div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Birthday Glam</h3>
+                                <p>Studio Shoot</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Pedicure -->
+                <div class="gallery-item" data-category="pedicure">
+                    <div class="gallery-img-wrapper">
+                        <div class="placeholder-img" style="background-color: #eee;"></div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Luxury Pedicure</h3>
+                                <p>Spa Treatment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6: Bridal -->
+                <div class="gallery-item" data-category="bridal">
+                    <div class="gallery-img-wrapper">
+                        <div class="placeholder-img" style="background-color: #f9f9f9;"></div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Timeless Elegance</h3>
+                                <p>Bridal Portrait</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Adunwealth</h3>
+                    <p>Luxury beauty services for the modern woman.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> 123 Beauty Lane, Lagos</p>
+                    <p><i class="fa-solid fa-phone"></i> +234 123 456 7890</p>
+                    <p><i class="fa-solid fa-envelope"></i> hello@adunwealth.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adunwealth BeautyHome. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
